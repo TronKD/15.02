@@ -1,0 +1,23 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main() {
+  int i;
+  int licznik;
+    
+	string ciag;
+  ifstream ciagi;
+  ciagi.open("ciagi.txt");
+
+	for (int i = 1; i<ciag.size(); i++) {
+   		if (ciag[i-1]=='1' && ciag[i] == '1') 
+    	 	licznik++;
+	}
+  ciagi.close();
+
+  cout << licznik ;
+
+  return 0;
+}
