@@ -1,0 +1,33 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main() {
+	int ciag1;
+	int ciag;
+	
+    ifstream ciagi;
+    ciagi.open("ciagi.txt");
+
+	while(!ciagi.eof()){
+		ciagi>>ciag1;
+		bool dwucykliczny(string ciag1){
+			int d=ciag.length();
+			if (d%2==1) return false;
+ 			for (int j=0; j<d/2; j++)
+ 				if (ciag[j]!=ciag[d/2+j]) return false;
+ 			return true;
+		}
+	} 
+    ciagi.close();
+
+    string str="We think in generalities, but we live in details.";
+	string str2 = str.substr (3,5); 
+	size_t pos = str.find("live");   
+	string str3 = str.substr (pos);  
+	cout << str2 << ' ' << str3 << '\n';
+
+    return 0;
+}
